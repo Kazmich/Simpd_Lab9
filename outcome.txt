@@ -1,0 +1,57 @@
+C5.0 [Release 2.07 GPL Edition]  	Wed Jun 14 09:18:51 2017
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 10 cases (5 attributes) from undefined.data
+
+Rules:
+
+Rule 1: (2, lift 3.8)
+	Capacity > 6.5
+	Size <= 53
+	->  class 1  [0.750]
+
+Rule 2: (5/3, lift 2.1)
+	Size > 53
+	->  class 2  [0.429]
+
+Rule 3: (3/1, lift 3.0)
+	Size > 53
+	Price <= 1399
+	->  class 3  [0.600]
+
+Rule 4: (3, lift 2.7)
+	Capacity <= 6.5
+	Size <= 53
+	->  class 4  [0.800]
+
+Default class: 4
+
+
+Evaluation on training data (10 cases):
+
+	        Rules     
+	  ----------------
+	    No      Errors
+
+	     4    1(10.0%)   <<
+
+
+	   (a)   (b)   (c)   (d)   (e)    <-classified as
+	  ----  ----  ----  ----  ----
+	     2                            (a): class 1
+	           2                      (b): class 2
+	                 2                (c): class 3
+	                       3          (d): class 4
+	                 1                (e): class 5
+
+
+	Attribute usage:
+
+	100.00%	Size
+	 50.00%	Capacity
+	 30.00%	Price
+
+
+Time: 0.0 secs
